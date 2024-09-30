@@ -1,0 +1,57 @@
+.typewriter {
+  font-family: "Itim", cursive; /* Handwriting font */
+  overflow: hidden; /* Prevents overflow */
+  border-right: 0.15em solid orange; /* Typewriter cursor */
+  white-space: nowrap; /* Keeps content in one line */
+  margin: 0 auto; /* Centers the text */
+  letter-spacing: 0.15em; /* Adjusts spacing between letters */
+  animation: 
+    typing 3.5s steps(40, end), /* Typing effect duration and steps */
+    blink-caret 0.75s step-end infinite; /* Blinking cursor */
+}
+
+/* Typing effect animation */
+@keyframes typing {
+  from { width: 0; } /* Start from 0 width */
+  to { width: 100%; } /* End at full width */
+}
+
+/* Cursor blinking animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; } /* No border */
+  50% { border-color: rgb(247, 77, 39); } /* Orange cursor at halfway */
+}
+
+/* Container for the typewriter text */
+.typewritercontainer {
+  text-align: center; /* Centers the container */
+  width: max-content; /* Container width based on content */
+  max-width: 90%; /* Limits width to 90% of the viewport */
+  margin: 0 auto; /* Center the container itself */
+  padding: 10px; /* Add some padding for aesthetics */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 0.45rem; /* Smaller font size for mobile */
+    letter-spacing: 0.1em; /* Adjust letter spacing */
+  }
+  
+  .typewritercontainer {
+    padding: 5px; /* Reduce padding for mobile */
+    max-width: 95%; /* Make the container slightly wider */
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter {
+    font-size: 0.4rem; /* Further reduce font size for smaller screens */
+    letter-spacing: 0.05em; /* Adjust letter spacing for smaller screens */
+  }
+
+  .typewritercontainer {
+    padding: 3px; /* Reduce padding for even smaller screens */
+  }
+}
+

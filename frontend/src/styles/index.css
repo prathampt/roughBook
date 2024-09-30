@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  color: #333;
+}
+.navbar {
+  font-family: "Itim", cursive;
+  padding: 20px;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #ffffff;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.roughbook {
+  font-family: "Rock Salt", cursive;
+  color: #f1356d;
+  font-size: 4vw; /* Use viewport width to scale with screen size */
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 40px;
+  position: relative;
+  max-width: 100%; /* Ensures it stays within bounds */
+  white-space: nowrap; /* Prevents line break on smaller screens */
+}
+
+.pratham {
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 2vw; /* Slightly smaller font using viewport width */
+  color: rgba(0, 109, 119, 0.7);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .roughbook {
+    font-size: 7vw; /* Adjust for tablets and smaller screens */
+    max-width: 80%;
+    text-align: left;
+    margin-left: 0px;
+  }
+
+  .pratham {
+    font-size: 4vw;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .roughbook {
+    text-align: left;
+    margin-left: 0px;
+    font-size: 8vw; /* Adjust for mobile screens */
+  }
+
+  .pratham {
+    font-size: 6vw;
+  }
+}
+
+/* Typewriter container */
+.right-section {
+  text-align: center; /* Aligns the typewriter text to the right */
+}
+
+/* page previews / list */
+.page-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.page-tile {
+  background: #f8f0e3; /* Light paper-like color */
+  border: 2px dashed #6b6b47; /* Rough edges */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  padding: 20px;
+  font-family: 'Reenie Beanie', cursive; /* Handwritten style */
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  line-height: 1.5;
+}
+
+/* Hover effect to give life to the tiles */
+.page-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Add some variety with random rotations for a "rough" look */
+.page-tile:nth-child(odd) {
+  transform: rotate(-1.5deg);
+}
+
+.page-tile:nth-child(even) {
+  transform: rotate(1.5deg);
+}
+
+/* Handwritten-style link to the full blog */
+.page-tile a {
+  text-decoration: none;
+  color: #333;
+}
+
+.page-tile a:hover {
+  color: #111;
+}
+
+.page-tile {
+  background: url(../../public/paperbackground.jpg);
+  background-size: cover;
+}
+
+/* page details page */
+.page-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.page-details div {
+  margin: 20px 0;
+}
+.page-details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* write new page form */
+.write {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.write label {
+  text-align: left;
+  display: block;
+}
+.write h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.write input, .write textarea, .write select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.write button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
