@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
+import '../styles/Write.css'
 
 const Write = () => {
     const [title, setTitle] = useState('');

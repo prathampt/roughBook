@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+.navbar {
+    font-family: "Itim", cursive;
+    padding: 20px;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: #ffffff;
+  }
+  .navbar .links {
+    margin-left: auto;
+  }
+  .navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+  }
+  .navbar a:hover {
+    color: #f1356d;
+  }
+
+  .roughbook {
+    font-family: "Rock Salt", cursive;
+    color: #f1356d;
+    font-size: 4vw; /* Use viewport width to scale with screen size */
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 40px;
+    position: relative;
+    max-width: 100%; /* Ensures it stays within bounds */
+    white-space: nowrap; /* Prevents line break on smaller screens */
+  }
+  
+  .pratham {
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 2vw; /* Slightly smaller font using viewport width */
+    color: rgba(0, 109, 119, 0.7);
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  
+  /* Add responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .roughbook {
+      font-size: 7vw; /* Adjust for tablets and smaller screens */
+      max-width: 80%;
+      text-align: left;
+      margin-left: 0px;
+    }
+  
+    .pratham {
+      font-size: 4vw;
+      margin-left: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .roughbook {
+      text-align: left;
+      margin-left: 0px;
+      font-size: 8vw; /* Adjust for mobile screens */
+    }
+  
+    .pratham {
+      font-size: 6vw;
+    }
+  }

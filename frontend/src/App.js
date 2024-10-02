@@ -4,7 +4,7 @@ import Write from './components/Write';
 import PageDetails from './components/PageDetails';
 import NotFound from './components/NotFound';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Typewriter from './hooks/Typewriter';
+import Typewriter from './components/Typewriter';
 
 function App() {
   const quote = "What is realization? The sudden change of something 'is' to something 'was'...";
