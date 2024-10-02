@@ -1,0 +1,43 @@
+/* Container for the search input */
+.search-container {
+    position: relative;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  /* Search input styling */
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  /* Dropdown for filtered results */
+  .dropdown {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    z-index: 10;
+  }
+  
+  /* Dropdown item styling */
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f2f2f2;
+  }
+  
