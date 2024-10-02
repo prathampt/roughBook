@@ -4,11 +4,11 @@ import '../styles/Pages.css'
 
 const PageDetails = () => {
   const { id } = useParams();
-  const { data: page, error, isPending } = useFetch('http://localhost:8000/pages/' + id);
+  const { data: page, error, isPending } = useFetch('/api/pages/' + id);
   const navigate = useNavigate();
 
   const handleClick = () => {
-    fetch('http://localhost:8000/pages/' + page.id, {
+    fetch('/api/pages/' + page.id, {
       method: 'DELETE'
     }).then(() => {
       navigate('/');
@@ -22,7 +22,7 @@ const PageDetails = () => {
       { page && (
         <article>
           <h2>{ page.title }</h2>
-          <p>{ page.author }</p>
+          <p>{ page.idea }</p>
           <div>{ page.body }</div>
           <button onClick={handleClick}>delete</button>
         </article>

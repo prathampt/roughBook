@@ -5,8 +5,8 @@ const PageList = ({ pages }) => {
   return (
     <div className="page-container">
       {pages.map(page => (
-        <div className="page-tile" key={page.id} >
-          <Link to={`/pages/${page.id}`}>
+        <div className="page-tile" key={page._id} >
+          <Link to={`/pages/${page._id}`}>
             <h2>{ page.title }</h2>
             <p>{ page.idea }</p>
           </Link>

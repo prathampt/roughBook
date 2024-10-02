@@ -8,8 +8,8 @@ import Typewriter from './components/Typewriter';
 import useFetch from './hooks/useFetch';
 
 function App() {
-  const quote = "What is realization? The sudden change of something 'is' to something 'was'...";
-  const { error, isPending, data } = useFetch('http://localhost:8000/pages/')
+  const { error: quoteError, isPending: isQuotePending, data: quote} = useFetch('/api/quotes/random')
+  const { error, isPending, data } = useFetch('/api/pages')
 
   return (
     <BrowserRouter>
@@ -23,7 +23,7 @@ function App() {
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
-        <Typewriter text={quote}/>
+        {!quoteError && !isQuotePending && <Typewriter text={quote[0]['quote']}/>}
       </div>
     </BrowserRouter>
   );

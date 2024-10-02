@@ -33,7 +33,7 @@ const Search = ({ data }) => {
         <ul className="dropdown">
           {filteredResults.map((result, index) => (
             <li key={index} className="dropdown-item">
-              <Link to={`/pages/${result['id']}`}>
+              <Link to={`/pages/${result['_id']}`}>
                 <b>{result['title']}</b>
                 {result['idea']}
               </Link>

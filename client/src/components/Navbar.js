@@ -4,18 +4,11 @@ import Search from "./Search";
 import { useState, useEffect } from 'react';
 
 const Navbar = ({ error, isPending, data }) => {
-    // const { error, isPending, data } = useFetch('http://localhost:8000/pages')
     const [query, setQuery] = useState([]) 
 
     useEffect(() => {
         if (data) {
-            setQuery(data.map((page) => {
-                return {
-                    "idea": page['idea'],
-                    "title": page['title'],
-                    "id": page['id']
-                };
-            }))
+            setQuery(data)
         }
     }, [data])
     
