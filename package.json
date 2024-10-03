@@ -4,7 +4,12 @@
   "description": "### Using Node LTS v20.9.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js --ignore client"
+    "dev": "nodemon server.js --ignore client",
+    "install-server": "npm install",
+    "start-server": "node server.js",
+    "install-client": "cd client && npm install",
+    "build-client": "cd client && npm run build",
+    "start-client": "cd client && npm run start"
   },
   "keywords": [],
   "author": "",
