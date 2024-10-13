@@ -4,7 +4,7 @@ import '../styles/Pages.css'
 
 const PageDetails = () => {
   const { id } = useParams();
-  const { data: page, error, isPending } = useFetch('/api/pages/' + id);
+  const { data: page, error, isPending } = useFetch(process.env.BACKEND_URI + '/api/pages/' + id);
   const navigate = useNavigate();
 
   const handleClick = () => {
