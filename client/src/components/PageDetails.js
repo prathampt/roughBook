@@ -4,11 +4,11 @@ import '../styles/Pages.css'
 
 const PageDetails = () => {
   const { id } = useParams();
-  const { data: page, error, isPending } = useFetch(process.env.BACKEND_URI + '/api/pages/' + id);
+  const { data: page, error, isPending } = useFetch(process.env.REACT_APP_BACKEND_URI + '/api/pages/' + id);
   const navigate = useNavigate();
 
   const handleClick = () => {
-    fetch('/api/pages/' + page.id, {
+    fetch(process.env.REACT_APP_BACKEND_URI + '/api/pages/' + page.id, {
       method: 'DELETE'
     }).then(() => {
       navigate('/');

@@ -12,7 +12,7 @@ const Write = () => {
         e.preventDefault();
         const blog = { title, body, idea };
     
-        fetch('http://localhost:8000/pages/', {
+        fetch(process.env.REACT_APP_BACKEND_URI + '/pages/', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog)

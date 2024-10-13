@@ -6,11 +6,10 @@ import NotFound from './components/NotFound';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Typewriter from './components/Typewriter';
 import useFetch from './hooks/useFetch';
-require('dotenv').config()
 
 function App() {
-  const { error: quoteError, isPending: isQuotePending, data: quote} = useFetch(process.env.BACKEND_URI + '/api/quotes/random')
-  const { error, isPending, data } = useFetch(process.env.BACKEND_URI + '/api/pages')
+  const { error: quoteError, isPending: isQuotePending, data: quote} = useFetch(process.env.REACT_APP_BACKEND_URI + '/api/quotes/random')
+  const { error, isPending, data } = useFetch(process.env.REACT_APP_BACKEND_URI + '/api/pages')
 
   return (
     <BrowserRouter>
