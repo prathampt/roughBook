@@ -34,24 +34,24 @@
 /* Mobile styles */
 @media (max-width: 768px) {
   .typewriter {
-    font-size: 0.45rem; /* Smaller font size for mobile */
-    letter-spacing: 0.1em; /* Adjust letter spacing */
+    font-size: 1.0rem; /* Smaller font size for mobile */
+    letter-spacing: 0.12em; /* Adjust letter spacing */
   }
   
   .typewritercontainer {
-    padding: 5px; /* Reduce padding for mobile */
+    padding: 8px; /* Reduce padding for mobile */
     max-width: 95%; /* Make the container slightly wider */
   }
 }
 
 @media (max-width: 480px) {
   .typewriter {
-    font-size: 0.4rem; /* Further reduce font size for smaller screens */
-    letter-spacing: 0.05em; /* Adjust letter spacing for smaller screens */
+    font-size: 0.475rem; 
+    letter-spacing: 0.04em;
   }
 
   .typewritercontainer {
-    padding: 3px; /* Reduce padding for even smaller screens */
+    padding: 4px; 
   }
 }
 

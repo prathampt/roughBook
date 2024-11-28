@@ -15,15 +15,17 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar data={data} error={error} isPending={isPending} />
-        <div className="content">
-          <Routes>
-            <Route exact path="/" element={<Home data={data} error={error} isPending={isPending} />}></Route>
-            <Route path="/write" element={<Write />}></Route>
-            <Route path="/pages/:id" element={<PageDetails />}></Route>
-            <Route path="*" element={<NotFound />}></Route>
-          </Routes>
+        <div className="header">
+          {!quoteError && !isQuotePending && <Typewriter text={quote[0]['quote']} />}
+          <div className="content">
+            <Routes>
+              <Route exact path="/" element={<Home data={data} error={error} isPending={isPending} />}></Route>
+              <Route path="/write" element={<Write />}></Route>
+              <Route path="/pages/:id" element={<PageDetails />}></Route>
+              <Route path="*" element={<NotFound />}></Route>
+            </Routes>
+          </div>
         </div>
-        {!quoteError && !isQuotePending && <Typewriter text={quote[0]['quote']}/>}
       </div>
     </BrowserRouter>
   );

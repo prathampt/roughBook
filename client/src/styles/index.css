@@ -6,7 +6,16 @@
   color: #333;
 }
 
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .App {
+  min-height: 120vh; /* Ensures it fills the full viewport height */
   background-color: #f7f2f2;
 }
 
@@ -15,3 +24,15 @@
   margin: 40px auto;
   padding: 20px;
 }
+
+.header {
+  display: flex;
+  flex-direction: column; /* Stack Navbar and Typewriter vertically by default */
+}
+
+@media (min-width: 768px) { /* For larger screens */
+  .header {
+    flex-direction: column-reverse; /* Reverse the order so Typewriter appears below */
+  }
+}
+
