@@ -20,9 +20,9 @@ html, body, #root {
 }
 
 .content {
-  max-width: 600px;
-  margin: 40px auto;
+  margin: auto;
   padding: 20px;
+  background-color: #f7f2f2;
 }
 
 .header {
@@ -30,9 +30,20 @@ html, body, #root {
   flex-direction: column; /* Stack Navbar and Typewriter vertically by default */
 }
 
-@media (min-width: 768px) { /* For larger screens */
-  .header {
-    flex-direction: column-reverse; /* Reverse the order so Typewriter appears below */
+.typewriterWrapper {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  bottom: 0%;
+  backdrop-filter: blur(50px);
+}
+
+@media (max-width: 768px) { /* For larger screens */
+  .typewriterWrapper {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
   }
 }
 

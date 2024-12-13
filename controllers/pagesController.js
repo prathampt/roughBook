@@ -41,9 +41,21 @@ const writePage = async (req, res) => {
     return res.status(400).json({ error: 'Please fill in all fields', emptyFields })
   }
 
+  const response = await fetch(`https://api.pexels.com/v1/search?query=abstract+art+pink+${title}&orientation=landscape&color=pink`, {
+    headers: {
+      Authorization: process.env.PEXELS_API_KEY,
+    },
+  });
+
+  const data = await response.json();
+  let image = process.env.DEFAULT_IMAGE;
+  if (data?.photos?.length > 0) {
+    const randomIndex = Math.floor(Math.random() * data.photos.length);
+    image = data.photos[randomIndex].src.landscape;
+  }
   // add to the database
   try {
-    const page = await Page.create({ title, idea, body })
+    const page = await Page.create({ title, idea, body, image })
     res.status(200).json(page)
   } catch (error) {
     res.status(400).json({ error: error.message })

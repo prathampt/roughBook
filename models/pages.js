@@ -14,6 +14,10 @@ const pageSchema = new Schema({
   body: {
     type: String,
     required: true
+  },
+  image: {
+    type: String,
+    require: true
   }
 }, { timestamps: true })
 

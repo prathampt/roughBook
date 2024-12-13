@@ -12,7 +12,7 @@ const Write = () => {
         e.preventDefault();
         const blog = { title, body, idea };
     
-        fetch(process.env.REACT_APP_BACKEND_URI + '/pages/', {
+        fetch(process.env.REACT_APP_BACKEND_URI + '/api/pages/', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog)

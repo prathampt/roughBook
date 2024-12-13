@@ -20,6 +20,9 @@ const PageDetails = () => {
       { isPending && <div>Loading...</div> }
       { error && <div>{ error }</div> }
       { page && (
+        <img src={page.image} alt="Page preview" className="page-image" />
+      )}
+      { page && (
         <article>
           <h2>{ page.title }</h2>
           <p>{ page.idea }</p>

@@ -18,8 +18,16 @@
     padding: 6px 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
+    border-radius: 10px;
     box-sizing: border-box;
     display: block;
+    font-size: 20px; 
+    font-weight: 600;
+    line-height: 30px;
+    white-space: pre-wrap;
+  }
+  .write textarea {
+    min-height: 250px;
   }
   .write button {
     background: #f1356d;

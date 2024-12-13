@@ -16,7 +16,9 @@ function App() {
       <div className="App">
         <Navbar data={data} error={error} isPending={isPending} />
         <div className="header">
-          {!quoteError && !isQuotePending && <Typewriter text={quote[0]['quote']} />}
+          <div className="typewriterWrapper">
+            {!quoteError && !isQuotePending && <Typewriter text={quote[0]['quote']} />}
+          </div>
           <div className="content">
             <Routes>
               <Route exact path="/" element={<Home data={data} error={error} isPending={isPending} />}></Route>
